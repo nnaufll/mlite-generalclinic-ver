@@ -1,163 +1,64 @@
-<p align="right">
-    <b>Codename: Sabrina</b><br>
+# 🏥 mLITE SIMRS - Klinik Umum & Estetik
+> **Customized Version for General Clinic Management System**
+
+---
+
+## 👥 Informasi Kelompok & Kontributor
+Aplikasi ini dikembangkan dan dikelola oleh:
+
+| No | Foto | Nama Lengkap | NIM | Peran / Deskripsi |
+| :-: | :-: | :--- | :-: | :--- |
+| 1 | 🧑‍💻 | **Naufal Nadina Putra** | `[2305101]` | **super admin** |
+| 2 | 🎨 | **ROihan Naufal** | `[2305105]` | **admin** (Theme Customization) |
+
+---
+
+## 📢 Pemberitahuan Penting (Read First!)
+> [!IMPORTANT]
+> **Akses Login Admin:** > Username: `admin` | Password: `admin`  
+> *(Mohon segera ganti password setelah instalasi pertama kali demi keamanan).*
+
+> [!WARNING]
+> **Konfigurasi Jaringan:** > Jika diakses melalui komputer lain (Client) dalam satu WiFi/LAN, pastikan pengaturan `'url'` di file `config.php` menggunakan alamat IP komputer server (Contoh: `http://192.168.1.5/mlite/`), bukan `localhost`.
+
+---
+
+## 🚀 Panduan Instalasi Cepat
+
+### 1. Database Setup
+1. Buat database baru bernama `mlite_db` di phpMyAdmin.
+2. Import file SQL yang tersedia di root repository: 
+   `📄 [nama_file_database_kamu].sql`
+
+### 2. Konfigurasi config.php
+Rename `config.php.default` menjadi `config.php` dan sesuaikan:
+```php
+'db' => [
+    'host' => 'localhost',
+    'user' => 'root',
+    'pass' => '',
+    'name' => 'mlite_db'
+],
+'url' => 'http://localhost/mlite/'
+
+> ### ✨ Fitur Utama (Customized)
+> - **✅ Modern Red UI** – Tema dashboard dengan palet warna merah profesional.
+> - **✅ Radiology Module** – Perbaikan sistem upload dan tampilan hasil radiologi.
+> - **✅ Esthetic Clinic Setup** – Penyesuaian layanan medis untuk kebutuhan klinik estetik.
+> - **✅ Integrated Pharmacy** – Manajemen stok obat dan e-resep yang sinkron dengan kasir.
+
+🛠️ Tech Stack
+Engine: PHP 7.4 / 8.x
+
+Database: MariaDB / MySQL
+
+Interface: Bootstrap, jQuery, AdminLTE (Customized)
+
+Version Control: Git & GitHub
+
+<p align="center">
+<b>© 2026 Project mLite - Klinik Umum</b>
+
+
+Dibuat untuk memenuhi tugas Program Magang Industri.
 </p>
-
-# mLITE
-
-mLITE adalah alternatif ringan dan aman untuk Sistem Informasi Kesehatan agar bisa dijalankan via Mobile / Browser. mLITE dibangun dari awal dengan berfokus pada kesederhanaan - programer pemula pun dapat membuat Module-Modul sendiri. Ini karena mLITE menerapkan sistem dan arsitektur aplikasi yang sangat mudah dalam bentuk Kerangka Kerja Mandiri (Independent Framework).
-
-Oh iya, mLITE memiliki panduan pemasangan yang sangat mudah juga. Hanya perlu 1 langkah penyesuaian. Segera setelah anda menyalin file-file ke komputer / server dan pengaturan selesai, mLITE siap digunakan! Proses pemasangan bahkan tidak membutuhkan waktu sebanyak yang diperlukan untuk menyalin file-filenya ;-)
-
-Panel kontrol dan tampilan default sepenuhnya responsif, yang membuatnya dapat diakses dari perangkat mobile apa pun, bahkan di ponsel, berkat kerangka kerja CSS yang digunakan - Bootstrap. Setiap modul dapat menyesuaikan dengan CSS nya sendiri.
-
-Masih banyak fitur-fitur tersembunyi untuk kebutuhan pengembangan. Silahkan jelajahi!!
-
-Kebutuhan Sistem
-----------------
-
-Persyaratan sistem untuk mLITE  sangat sederhana, sehingga setiap server modern sudah cukup. Berikut persyaratan minimal yang diperlukan
-
-+ Apache 2.2+ dengan `mod_rewrite` atau Nginx
-+ PHP versi 7.4 - 8.3+
-+ MySQL atau MariaDB
-
-Konfigurasi PHP harus memiliki ekstensi berikut:
-
-+ dom
-+ gd
-+ mbstring
-+ pdo
-+ zip
-+ cURL
-
-Pemasangan
-----------
-
-### Pemasangan menggunakan composer.
-1. Install composer di server/PC dan jalankan perintah composer untuk pemasangan paket utama dan independensi
-
-```
-$ composer create-project basoro/mlite
-```
-
-2. Buat folder `uploads`, `tmp/` dan `admin/tmp`. Beberapa server mungkin memerlukan izin tambahan `chmod 777` untuk direktori dan file tersebut.
-
-3. Sesuaikan pengaturan di .env
-
-4. Buat database baru di MySQL/MariaDB dan import file `mlite_db.sql`
-
-5. Buka browser Anda dan navigasikan ke alamat tempat file mLITE berada.
-
-6. Silahkan login dengan Username: admin dan Password: admin
-
-### Pemasangan Manual
-1. Unduh versi terbaru [mLITE] (https://github.com/basoro/mlite).
-
-2. Ekstrak semua file dari paket terkompresi dan kemudian transfer ke direktori lokal atau server. Biasanya, file diunggah ke `www`,` htdocs` atau `public_html`.
-
-3. Install composer di server/PC dan jalankan perintah composer untuk pemasangan independensi
-```
-$ composer install
-```
-
-4. Buat folder `uploads`, `tmp/` dan `admin/tmp`. Beberapa server mungkin memerlukan izin tambahan `chmod 777` untuk direktori dan file tersebut.
-
-5. Sesuaikan pengaturan di .env
-
-6. Buat database baru di MySQL/MariaDB dan import file `mlite_db.sql` (tambahkan sql-mode = '' pada my.cnf atau jalankan perintah berikut)
-
-```
-$ sed -i "/user=mysql/a sql-mode = ''" /etc/my.cnf
-```
-
-7. Buka browser Anda dan navigasikan ke alamat tempat file mLITE berada.
-
-8. Silahkan login dengan Username: admin dan Password: admin
-
-### Pemasangan menggunakan docker.
-1. Download file release terbaru [mLITE] atau lakukan git clone.
-
-```
-$ git clone https://github.com/basoro/mlite.git
-```
-Sesuaikan environment variable di .env seperti port APP dan MySQL dari default ke port yang anda inginkan (atau biarkan defautl saja). 
-
-2. Jalankan perintah docker-compose
-```
-$ cd mlite/docker && docker-compose build && docker-compose up -d
-```
-
-3. Buka browser Anda dan navigasikan ke alamat URL_ADDRESS:8088.
-
-4. Silahkan login dengan Username: admin dan Password: admin
-
-
-## Catatan:
-Untuk setiap kali update, silahkan jalankan perintah
-```
-$ composer update
-```
-Ini untuk menambahkan dependensi baru pada aplikasi
-
-
-## Peringatan!
-
-+ Untuk pengguna Apache, pastikan file `.htaccess` juga ada di server. Tanpanya mLITE tidak akan berfungsi.
-+ Untuk pengguna Nginx, tambahkan konfigurasi berikut di pengaturan nginx.conf (atau sejenisnya)
-
-```bash
-location  / {
-    index  index.php;
-    if (!-e $request_filename) {
-        rewrite / /index.php last;
-    }
-}
-
-location ^~ /systems/data/ {
-    deny all;
-    return 403;
-}
-
-location ~* \.(sdb|txt|env|md)$ {
-    deny all;
-    return 403;
-}
-
-location  /admin {
-    index index.php;
-    try_files $uri $uri/ /admin/index.php?$args;
-}
-```
-
-Jika ada didalam folder, misalnya `lite`
-
-```bash
-location  /lite {
-    index  index.php;
-    if (!-e $request_filename) {
-        rewrite / /lite/index.php last;
-    }
-}
-
-location ^~ /lite/systems/data/ {
-    deny all;
-    return 403;
-}
-
-location ~* \.(sdb|txt|env|md)$ {
-    deny all;
-    return 403;
-}
-
-location  /lite/admin {
-    index index.php;
-    try_files $uri $uri/ /lite/admin/index.php?$args;
-}
-```
-
-Untuk masuk ke panel administrasi, tambahkan `/admin/` di akhir URL.
-#### Login: `admin` Kata sandi: `admin`
-Ini harus diubah segera setelah login untuk alasan keamanan. Juga dapat mengganti nama direktori dengan panel administrasi.  (Anda perlu mengubahnya pada `config.php`)
-
-## Demo
-Untuk Demo dan Info lebih lanjut di https://mlite.id
