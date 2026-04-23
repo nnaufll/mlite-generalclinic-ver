@@ -1,67 +1,65 @@
-# 🏥 mLITE SIMRS - Klinik Umum & Estetik
-> **Customized Version for General Clinic Management System**
+🏥 mLITE SIMRS - Klinik Umum & Estetik Customized Version for General &
+Esthetic Clinic Management System
 
----
+==================================================
 
-## 👥 Informasi Kelompok & Kontributor
-Aplikasi ini dikembangkan dan dikelola oleh:
+👥 INFORMASI TIM PENGEMBANG Aplikasi ini dikembangkan sebagai bagian
+dari proyek magang industri:
 
-| No | Foto | Nama Lengkap | NIM | Peran / Deskripsi |
-| :-: | :-: | :--- | :-: | :--- |
-| 1 | 🧑‍💻 | **Naufal Nadina Putra** | `[2305101]` | **super admin** |
-| 2 | 🎨 | **ROihan Naufal** | `[2305105]` | **admin** (Theme Customization) |
+1.  Naufal Nadina Putra (2305101) - Super Admin / Backend Developer
+2.  Roihan Naufal (2305105) - Admin / UI & Theme Customization
 
----
+==================================================
 
-## 📢 Pemberitahuan Penting (Read First!)
-> [!IMPORTANT]
-> **Akses Login Admin:** > Username: `admin` | Password: `admin`  
-> *(Mohon segera ganti password setelah instalasi pertama kali demi keamanan).*
+📢 PEMBERITAHUAN PENTING
 
-> [!WARNING]
-> **Konfigurasi Jaringan:** > Jika diakses melalui komputer lain (Client) dalam satu WiFi/LAN, pastikan pengaturan `'url'` di file `config.php` menggunakan alamat IP komputer server (Contoh: `http://192.168.1.5/mlite/`), bukan `localhost`.
+[IMPORTANT] Akses Login Default: Username: admin Password: admin Segera
+ganti password setelah login pertama untuk keamanan.
 
----
+[WARNING] Konfigurasi Jaringan: Jika diakses melalui perangkat lain
+dalam satu jaringan, ubah ‘url’ di config.php Contoh:
+http://192.168.1.5/mlite/ Jangan gunakan localhost.
 
-## 🚀 Panduan Instalasi Cepat
+==================================================
 
-### 1. Database Setup
-1. Buat database baru bernama `mlite_db` di phpMyAdmin.
-2. Import file SQL yang tersedia di root repository: 
-   `📄 [nama_file_database_kamu].sql`
+🚀 PANDUAN INSTALASI
 
-### 2. Konfigurasi config.php
-Rename `config.php.default` menjadi `config.php` dan sesuaikan:
-```php
-'db' => [
-    'host' => 'localhost',
-    'user' => 'root',
-    'pass' => '',
-    'name' => 'mlite_db'
-],
-'url' => 'http://localhost/mlite/'
+1.  Setup Database
 
-✨ Fitur Utama (Customized)
-✅ Modern Red UI – Tema dashboard dengan palet warna merah profesional.
+-   Buat database: mlite_db
+-   Import file SQL dari folder database
 
-✅ Radiology Module – Perbaikan sistem upload dan tampilan hasil radiologi.
+2.  Konfigurasi Aplikasi Rename: config.php.default → config.php
 
-✅ Esthetic Clinic Setup – Penyesuaian layanan medis untuk kebutuhan klinik estetik.
+Edit: ‘db’ => [ ‘host’ => ‘localhost’, ‘user’ => ‘root’, ‘pass’ => ’‘,
+’name’ => ‘mlite_db’], ‘url’ => ‘http://localhost/mlite/’
 
-✅ Integrated Pharmacy – Manajemen stok obat dan e-resep yang sinkron dengan kasir.
+3.  Jalankan Aplikasi
 
-🛠️ Tech Stack
-Engine: PHP 7.4 / 8.x
+-   Letakkan di htdocs/www
+-   Jalankan Apache & MySQL
+-   Akses: http://localhost/mlite/
 
-Database: MariaDB / MySQL
+==================================================
 
-Interface: Bootstrap, jQuery, AdminLTE (Customized)
+✨ FITUR UTAMA
 
-Version Control: Git & GitHub
+-   Modern Red UI
+-   Radiology Module Enhancement
+-   Esthetic Clinic Customization
+-   Integrated Pharmacy System
 
-<p align="center">
-<b>© 2026 Project mLite - Klinik Umum</b>
+==================================================
 
+🛠️ TECH STACK
 
-<i>Dibuat untuk memenuhi tugas Program Magang Industri.</i>
-</p>
+Backend: PHP 7.4 / 8.x Database: MySQL / MariaDB Frontend: Bootstrap,
+jQuery, AdminLTE Version Control: Git & GitHub
+
+==================================================
+
+📌 CATATAN - Aktifkan ekstensi mysqli dan gd - Gunakan browser modern
+
+==================================================
+
+© 2026 mLITE SIMRS Dibuat untuk Program Magang Industri
