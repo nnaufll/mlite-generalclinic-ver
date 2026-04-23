@@ -41,11 +41,14 @@ Rename `config.php.default` menjadi `config.php` dan sesuaikan:
 ],
 'url' => 'http://localhost/mlite/'
 
-> ### ✨ Fitur Utama (Customized)
-> - **✅ Modern Red UI** – Tema dashboard dengan palet warna merah profesional.
-> - **✅ Radiology Module** – Perbaikan sistem upload dan tampilan hasil radiologi.
-> - **✅ Esthetic Clinic Setup** – Penyesuaian layanan medis untuk kebutuhan klinik estetik.
-> - **✅ Integrated Pharmacy** – Manajemen stok obat dan e-resep yang sinkron dengan kasir.
+✨ Fitur Utama (Customized)
+✅ Modern Red UI – Tema dashboard dengan palet warna merah profesional.
+
+✅ Radiology Module – Perbaikan sistem upload dan tampilan hasil radiologi.
+
+✅ Esthetic Clinic Setup – Penyesuaian layanan medis untuk kebutuhan klinik estetik.
+
+✅ Integrated Pharmacy – Manajemen stok obat dan e-resep yang sinkron dengan kasir.
 
 🛠️ Tech Stack
 Engine: PHP 7.4 / 8.x
@@ -60,5 +63,5 @@ Version Control: Git & GitHub
 <b>© 2026 Project mLite - Klinik Umum</b>
 
 
-Dibuat untuk memenuhi tugas Program Magang Industri.
+<i>Dibuat untuk memenuhi tugas Program Magang Industri.</i>
 </p>
