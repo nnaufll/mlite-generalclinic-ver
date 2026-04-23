@@ -66,3 +66,8 @@ themes/atilamedika
 api/
 docker/.env
 mobile-react/node_modules/.package-lock.json
+
+/themes/tmp/*
+/config.php
+.DS_Store
+thumbs.db

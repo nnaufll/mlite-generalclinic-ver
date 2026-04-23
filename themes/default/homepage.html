@@ -65,40 +65,36 @@
     </div>
   </div>
 </div>
+
 <div id="time-table" class="time-table-section">
   <div class="container">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="row">
-        <div class="service-time one" style="background:#2895f1;"><span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
-          <h3>Gawat Darurat</h3>
-          <p>{$website.website.homepage_gawat_darurat}</p>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding:0;">
+      <div class="service-time one"><span class="info-icon"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+        <h3>Pemeriksaan Umum</h3>
+        <p>Layanan konsultasi dokter umum dan penanganan medis dasar untuk keluarga Anda.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding:0;">
+      <div class="service-time middle"><span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+        <h3>Jam Operasional</h3>
+        <div class="time-table-section" style="padding: 0;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><span class="left">Senin - Jum'at</span><span class="right" style="float: right;">08:00 - 20:00</span></li>
+            <li><span class="left">Sabtu</span><span class="right" style="float: right;">08:00 - 17:00</span></li>
+            <li><span class="left">Minggu</span><span class="right" style="float: right;">Tutup</span></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="row">
-        <div class="service-time middle" style="background:#0071d1;"><span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-          <h3>Rawat Jalan</h3>
-          <div class="time-table-section">
-            <ul>
-              <li><span class="left">Senin - Jum'at</span><span class="right">{$website.website.homepage_rawat_jalan_1}</span></li>
-              <li><span class="left">Sabtu</span><span class="right">{$website.website.homepage_rawat_jalan_2}</span></li>
-              <li><span class="left">Minggu</span><span class="right">{$website.website.homepage_rawat_jalan_3}</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="row">
-        <div class="service-time three" style="background:#0060b1;"><span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
-          <h3>Rawat Inap</h3>
-          <p>{$website.website.homepage_rawat_inap}</p>
-        </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding:0;">
+      <div class="service-time three"><span class="info-icon"><i class="fa fa-medkit" aria-hidden="true"></i></span>
+        <h3>Apotek & Farmasi</h3>
+        <p>Melayani penebusan resep obat dan penyediaan alat kesehatan secara lengkap dan cepat.</p>
       </div>
     </div>
   </div>
 </div>
+
 <div id="about" class="section wow fadeIn">
   <div class="container">
     <div class="heading"><span class="icon-logo"><img src="{?=url(UPLOADS.'/'.$website.website.homepage_logo_icon)?}" alt="{$website.setting.nama_instansi}"></span>
@@ -198,21 +194,21 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="form-group">
-                      <input type="text" name="nama" placeholder="Nama Pasien">
+                      <input type="text" name="nama" placeholder="Nama Pasien" class="form-control">
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="form-group">
-                      <input type="text" name="no_telp" placeholder="Nomor Telepon / HP">
+                      <input type="text" name="no_telp" placeholder="Nomor Telepon / HP" class="form-control">
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="form-group">
-                      <input type="email" placeholder="Email" name="email">
+                      <input type="email" placeholder="Email" name="email" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -226,7 +222,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="form-group">
-                      <input type="text" placeholder="Tanggal Berobat" name="tanggal" class="tanggal">
+                      <input type="text" placeholder="Tanggal Berobat" name="tanggal" class="tanggal form-control">
                     </div>
                   </div>
                 </div>

@@ -701,17 +701,19 @@ class Admin extends AdminModule
     }    
 
     public function anyObat()
-    {
-      $obat = $this->db('databarang')
-        ->join('gudangbarang', 'gudangbarang.kode_brng=databarang.kode_brng')
-        ->where('status', '1')
-        ->where('gudangbarang.kd_bangsal', $this->settings->get('farmasi.oral_diagnostic'))
-        ->like('databarang.nama_brng', '%'.$_POST['obat'].'%')
-        ->limit(10)
-        ->toArray();
-      echo $this->draw('obat.html', ['obat' => $obat]);
-      exit();
-    }
+{
+  $obat = $this->db('databarang')
+    ->select('databarang.kode_brng, databarang.nama_brng, gudangbarang.*') // 🔥 WAJIB
+    ->join('gudangbarang', 'gudangbarang.kode_brng=databarang.kode_brng')
+    ->where('databarang.status', '1')
+    ->where('gudangbarang.kd_bangsal', $this->settings->get('farmasi.oral_diagnostic'))
+    ->like('databarang.nama_brng', '%'.$_POST['obat'].'%')
+    ->limit(10)
+    ->toArray();
+
+  echo $this->draw('obat.html', ['obat' => $obat]);
+  exit();
+}
 
     public function postAturanPakai()
     {
